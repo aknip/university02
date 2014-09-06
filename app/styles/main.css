@@ -1,0 +1,41 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "roboto";
+    font-weight: 300;
+}
+
+
+.phone-view-container{
+    position: absolute;
+    left: 33px;
+    top: 122px;
+    width: 320px;
+    z-index: 2;
+}
+
+@media (max-width: 385px) {
+    .phone-frame{
+        display: none;
+    }
+
+    .phone-view-container{
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+}
+
+
+.famous-angular-container {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* APP STYLES */
+.famous-surface p {
+    color: white;
+    text-align: center;
+}
