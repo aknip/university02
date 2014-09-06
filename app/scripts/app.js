@@ -5,6 +5,7 @@ angular.module('famousApp', ['famous.angular', 'ui.router'])
         $stateProvider
 
             .state("homeview", {
+                controller: "homeview",
                 url: "/homeview",
                 templateUrl: "views/homeview.html"
             })

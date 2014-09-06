@@ -35,7 +35,28 @@ body {
 }
 
 /* APP STYLES */
-.famous-surface p {
-    color: white;
+.side-view-button {
     text-align: center;
+    color: white;
+    font-family: "ios7-style-font-icons";
+    font-size: 14px;
+    line-height: 90px;
+}
+
+.fa.fa-arrows-alt {
+    color: #888;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 18px;
+}
+
+.headertext {
+    color: white;
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
 }

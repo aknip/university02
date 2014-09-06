@@ -1,5 +1,32 @@
 
 <fa-app class="appsize" style="margin: 0;" fa-perspective="1000">
-    <fa-surface fa-background-color="'#2d5d81'"><p>hello world</p></fa-surface>
+    <fa-surface fa-background-color="'#FFF'"></fa-surface>
+    <fa-modifier fa-translate = "sideTransitionable1.get()">
 
+        <fa-view id="side">
+            <fa-modifier fa-size="[50, undefined]">
+                <fa-modifier fa-origin="[1, 0]" fa-translate = "sideTransitionable2.get()">
+                    <fa-modifier fa-rotate = "sideTransitionable3.get()">
+                        <fa-grid-layout fa-options="{ dimensions: [1, 6] }">
+                            <fa-surface ng-repeat="element in sideNavElements" ng-class="['side-view-button']" fa-background-color="element.bgcolor"> <i class="fa {{element.iconclass}}" ></i>
+                            </fa-surface>
+                        </fa-grid-layout>
+                    </fa-modifier>
+                </fa-modifier>
+            </fa-modifier>
+        </fa-view>
+
+        <fa-view id="main">
+            <fa-header-footer-layout>
+                <fa-modifier fa-translate = "[0,0,1]">
+                    <fa-surface fa-size="[undefined, 50]" fa-background-color="'#2d5d81'" fa-click="menuToggle($event)"> <i class="fa fa-arrows-alt"></i><span class="headertext">acme management app</span>
+                    </fa-surface>
+                </fa-modifier>
+
+                <fa-surface fa-background-color="'#ddd'"><p>hello world</p></fa-surface>
+
+            </fa-header-footer-layout>
+        </fa-view>
+
+    </fa-modifier>
 </fa-app>
