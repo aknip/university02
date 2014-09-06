@@ -21,5 +21,5 @@ Embedded in "Dynamic Presentation Frame":
 ##Based on:
 - Copy of 'famous-angular-examples'
 - require.js dependency removed
-- stripped down
+- stripped down some details
 
