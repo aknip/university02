@@ -1,13 +1,21 @@
 angular.module('famousApp', ['famous.angular', 'ui.router'])
     .config(function ($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise("/homeview");
+        
         $stateProvider
 
-            .state("homeview", {
+            .state("home", {
                 controller: "homeview",
-                url: "/homeview",
+                url: "/home",
                 templateUrl: "views/homeview.html"
             })
+            
+            .state("home.list", {
+                controller: "homeview",
+                url: "/list",
+                templateUrl: "views/homeview.html"
+            })
+            
+        $urlRouterProvider.otherwise("/home");    
 
     }); 

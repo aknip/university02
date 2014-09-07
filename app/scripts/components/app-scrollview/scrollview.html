@@ -1,0 +1,12 @@
+<fa-view >
+    <fa-scroll-view fa-pipe-from="myscrollEventHandler" fa-options="{direction: 1}">
+        <fa-view ng-repeat="item in list">
+            <fa-surface fa-pipe-to="myscrollEventHandler"
+                        fa-size="[undefined, 100]"
+                        fa-background-color="{{item.color}}" 
+                        ng-class="'listItem'">
+                        {{item.content}}
+            </fa-surface>
+        </fa-view>
+    </fa-scroll-view>
+</fa-view>

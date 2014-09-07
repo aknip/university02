@@ -60,3 +60,9 @@ body {
     text-align: center;
     width: 100%;
 }
+
+.listItem {
+    text-align: center;
+    line-height: 6em;
+    color: white;
+}
