@@ -9,7 +9,6 @@ angular.module('famousApp')
         var Transitionable = $famous['famous/transitions/Transitionable'];
         var Easing = $famous['famous/transitions/Easing'];
 
-
         // side navigation
         $scope.menuToggleStatus = true;
 
@@ -106,7 +105,6 @@ angular.module('famousApp')
 
 
         });
-
 
     });
 
