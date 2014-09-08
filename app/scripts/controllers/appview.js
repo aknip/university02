@@ -1,13 +1,16 @@
 'use strict';
 
 angular.module('famousApp')
-    .controller('homeview', function ($scope, $famous) {
+    .controller('appview', function ($scope, $famous, $state) {
         var View = $famous['famous/core/View'];
         var Modifier = $famous['famous/core/Modifier'];
         var Surface = $famous['famous/core/Surface'];
         var Transform = $famous['famous/core/Transform'];
         var Transitionable = $famous['famous/transitions/Transitionable'];
+        var Easing = $famous['famous/transitions/Easing'];
 
+
+        // side navigation
         $scope.menuToggleStatus = true;
 
         $scope.sideTransitionable1 = new Transitionable([0, 0, 0]);
@@ -27,7 +30,7 @@ angular.module('famousApp')
             }
             $scope.menuToggleStatus = ! $scope.menuToggleStatus;
 
-        }
+        };
 
         $scope.sideNavElements = [
             {
@@ -54,9 +57,57 @@ angular.module('famousApp')
                 iconclass: 'fa-cogs',
                 bgcolor: 'rgba(63, 71, 81, 1)'
             }
-        ]
+        ];
 
 
+        // Handle scroll event
+        var EventHandler = $famous['famous/core/EventHandler'];
+        $scope.myscrollEventHandler = new EventHandler();
+
+
+        // Generate data for scroll-list
+        $scope.list = [];
+        for(var i = 0; i < 50; i++) {
+            $scope.list.push(
+                {   id: (i+1),
+                    content: ("item "+(i+1)),
+                    color: "'hsl(" + (i * 360 / 8) + ", 60%, 50%)'"}
+            )
+        }
+
+
+        $scope.navigateToDetail = function (detailID) {
+            $state.go('app.list.detail', {detail: detailID})
+        }
+
+        $scope.navigateToList = function () {
+            $state.go('app.list.detail', {detail: 0})
+        }
+
+
+        // Positioning of detailview
+        $scope.animateDetail = new Transitionable([20,600,5]);
+
+
+        // Animation of detailview
+        $scope.$on('$stateChangeStart',
+            function(event, toState, toParams, fromState, fromParams) {
+
+                $scope.detailID = toParams.detail;
+
+                if (toParams.detail > 0) {
+                    $scope.animateDetail.set([20, 20, 5], {duration: 1000, curve: Easing.outElastic});
+                } else {
+                    $scope.animateDetail.set([20, 600, 5], {duration: 300, curve: Easing.inOutQuad});
+                }
+
+                // Prevent this state from completing
+                // evt.preventDefault();
+
+
+        });
 
 
     });
+
+
