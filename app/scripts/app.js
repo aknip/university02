@@ -7,21 +7,21 @@ angular.module('famousApp', ['famous.angular', 'ui.router'])
                 url: "/app",
                 controller: "appview",
                 abstract: true,
-                templateUrl: "partials/appview.html"
+                templateUrl: "views/appview.html"
             })
 
             .state("app.list", {
                 url: "/list",
                 abstract: true,
                 views: {
-                    "listView": { templateUrl: "partials/listview.html" }
+                    "listView": { templateUrl: "views/listview.html" }
                 }
             })
 
             .state("app.list.detail", {
                 url: "/:detail",
                 views: {
-                    "detailView": { templateUrl: "partials/listview-detail.html" }
+                    "detailView": { templateUrl: "views/listview-detail.html" }
                 }
             })
 

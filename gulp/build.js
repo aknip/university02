@@ -18,8 +18,8 @@ gulp.task('scripts', function () {
         .pipe($.size());
 });
 
-gulp.task('partials', function () {
-  return gulp.src('app/partials/**/*.html')
+gulp.task('views', function () {
+  return gulp.src('app/views/**/*.html')
       .pipe($.minifyHtml({
         empty: true,
         spare: true,
@@ -27,33 +27,33 @@ gulp.task('partials', function () {
       }))
       .pipe($.ngHtml2js({
         moduleName: "famousApp",
-        prefix: "partials/"
+        prefix: "views/"
       }))
-      .pipe(gulp.dest(".tmp/partials"))
+      .pipe(gulp.dest(".tmp/views"))
       .pipe($.size());
 });
 
 gulp.task('haml', function () {
-  // return gulp.src('app/partials/**/*.haml')
+  // return gulp.src('app/views/**/*.haml')
   //     .pipe($.haml())
-  //     .pipe(gulp.dest("app/partials"))
+  //     .pipe(gulp.dest("app/views"))
 });
 
 gulp.task('jade', function () {
-  return gulp.src('app/partials/**/*.jade')
+  return gulp.src('app/views/**/*.jade')
       .pipe($.jade())
-      .pipe(gulp.dest("app/partials"))
+      .pipe(gulp.dest("app/views"))
 });
 
-gulp.task('html', ['styles', 'scripts', 'haml', 'jade', 'partials'], function () {
+gulp.task('html', ['styles', 'scripts', 'haml', 'jade', 'views'], function () {
     var jsFilter = $.filter('**/*.js');
     var cssFilter = $.filter('**/*.css');
 
     ;
     return gulp.src('app/*.html')
-        .pipe($.inject(gulp.src('.tmp/partials/**/*.js'), {
+        .pipe($.inject(gulp.src('.tmp/views/**/*.js'), {
           read: false,
-          starttag: '<!-- inject:partials -->',
+          starttag: '<!-- inject:views -->',
           addRootSlash: false,
           ignorePath: '.tmp'
         }))
@@ -96,4 +96,4 @@ gulp.task('clean', function () {
     return gulp.src(['.tmp', 'dist'], { read: false }).pipe($.clean());
 });
 
-gulp.task('build', ['haml', 'jade', 'html', 'partials', 'images', 'fonts']);
+gulp.task('build', ['haml', 'jade', 'html', 'views', 'images', 'fonts']);

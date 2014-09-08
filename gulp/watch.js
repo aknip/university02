@@ -10,9 +10,9 @@ gulp.task('watch', ['serve'], function () {
     // watch for changes
 
     gulp.watch([
-        'app/partials/**/*.html',
-        'app/partials/**/*.haml',
-        'app/partials/**/*.jade',
+        'app/views/**/*.html',
+        'app/views/**/*.haml',
+        'app/views/**/*.jade',
         'app/styles/**/*.css',
         'app/scripts/**/*.js',
         'app/images/**/*'
