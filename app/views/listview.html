@@ -1,42 +1,46 @@
 <fa-view >
 
-    <fa-modifier  fa-translate="[0,-1,1]">
-        <fa-surface ng-class="'navsubheader'" fa-size="[undefined, 55]">
-            Headline
+    <fa-modifier  fa-translate="getNavSubheaderPos()">
+        <fa-surface ng-class="'navsubheader'" fa-size="[undefined, 150]">
+            Welcome!
         </fa-surface>
     </fa-modifier>
-    <fa-modifier  fa-translate="[0,53]">
+    <fa-modifier  fa-translate="[0,0]">
         <fa-surface fa-background-color="'#eee'" >
         </fa-surface>
     </fa-modifier>
 
-    <fa-modifier fa-translate="[20,20,2]">
-        <fa-container-surface fa-options="{size: [appOptions.appSize[0]-40, undefined], properties: {overflow: 'hidden'}}">
+    <fa-modifier fa-translate="[0,0,2]">
+        <fa-container-surface fa-options="{size: [appOptions.appSize[0], undefined], properties: {overflow: 'hidden'}}">
             <fa-scroll-view id="scrollview-1" fa-pipe-from="myscrollEventHandler" fa-options="{direction: 1}">
+                <fa-view fa-size="[undefined, 1200]">
+                    <fa-view ng-repeat="catitem in list" ng-init="catIndex = $index">
+                        <fa-modifier fa-translate="getCategoryBoxPos(catIndex)"
+                                     fa-size="getCategoryBoxSize(catIndex)">
+                            <fa-surface fa-pipe-to="myscrollEventHandler"
+                                        fa-background-color="{{catitem.color}}"
+                                        ng-class="'listCategoryItem'"
+                                        ng-click="addItem(catitem.id)">
+                                {{catitem.category}} {{catitem.title}}
+                            </fa-surface>
+                        </fa-modifier>
 
-                <fa-view ng-repeat="item in list" fa-size="[undefined,51]">
-                    <fa-modifier fa-translate="itemPosition(item)" >
-                        <fa-modifier fa-translate="[0,55]" fa-scale="item.animateEnterScale.get()" >
+                    <fa-view ng-repeat="entryitem in catitem.entries" ng-init="entryIndex = $index">
+                        <fa-modifier fa-translate="getItemBoxPos(catIndex, entryIndex)"
+                                     fa-size="getItemBoxSize(catIndex, entryIndex)">
                             <fa-surface fa-pipe-to="myscrollEventHandler"
-                                        fa-size="[50, 50]"
-                                        fa-background-color="{{item.color}}"
-                                        ng-class="'listItem'"
-                                        ng-click="navigateToDetail(item.id)">
+                                        fa-background-color="{{entryitem.color}}"
+                                        ng-class="'listEntryItem'"
+                                        ng-click="addItem(entryitem.id)">
+                                {{entryitem.title}}
                             </fa-surface>
                         </fa-modifier>
-                        <fa-modifier fa-translate="[51,55]"
-                                     fa-size="[appOptions.appSize[0]-91, 50]"
-                                     fa-opacity="itemOpacity(item)"
-                                     fa-scale="item.animateEnterScale.get()">
-                            <fa-surface fa-pipe-to="myscrollEventHandler"
-                                        fa-background-color="{{item.color}}"
-                                        ng-class="'listItem'"
-                                        ng-click="addItem(item.id)">
-                                {{item.content}} {{appOptions.appSize[0]}}
-                            </fa-surface>
-                        </fa-modifier>
-                    </fa-modifier>
+                    </fa-view>
+
+
+                    </fa-view>
                 </fa-view>
+
             </fa-scroll-view>
         </fa-container-surface>
     </fa-modifier>

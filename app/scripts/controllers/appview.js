@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('famousApp')
-    .controller('appview', function ($scope, $famous, $state, appOptions) {
+    .controller('appview', function ($scope, $famous, $state, appOptions, appData, menuData) {
         var View = $famous['famous/core/View'];
         var Modifier = $famous['famous/core/Modifier'];
         var Surface = $famous['famous/core/Surface'];
@@ -36,32 +36,7 @@ angular.module('famousApp')
 
         };
 
-        $scope.sideNavElements = [
-            {
-                iconclass: 'fa-css3',
-                bgcolor: 'rgba(77, 89, 102, 1)'
-            },
-            {
-                iconclass: 'fa-globe',
-                bgcolor: 'rgba(245, 132, 133, 1)'
-            },
-            {
-                iconclass: 'fa-cloud-upload',
-                bgcolor: 'rgba(254, 197, 130, 1)'
-            },
-            {
-                iconclass: 'fa-dashboard',
-                bgcolor: 'rgba(202, 152, 236, 1)'
-            },
-            {
-                iconclass: 'fa-mobile-phone',
-                bgcolor: 'rgba(69, 227, 189, 1)'
-            },
-            {
-                iconclass: 'fa-cogs',
-                bgcolor: 'rgba(63, 71, 81, 1)'
-            }
-        ];
+        $scope.sideNavElements = menuData;
 
 
         // Handle scroll event
@@ -69,53 +44,75 @@ angular.module('famousApp')
         Engine.pipe($scope.myscrollEventHandler);
 
 
-        // 3 ways to use scrollview-based animation:
 
+        // Generate data for scroll-list
 
-        // use modifier with attribute, eg. opacity
-        var _height = 60;
-        var _scrollView = undefined;
-        $scope.itemOpacity = function(item){
-            _scrollView = _scrollView || $famous.find('#scrollview-1')[0].renderNode;
-            if(_scrollView && _scrollView._node){
-                var page = _scrollView._node.index;
-                var absPosition = _height * page + _scrollView.getPosition();
-                var heightRange = 550;
-                var heightOffset = 0;
-                var result = 0;
+        $scope.list = appData;
 
-                result = (item.id*_height - absPosition - heightOffset);
-                result = Math.max(Math.min(result, heightRange), -heightRange);
-                result = 1-Math.abs(result/heightRange);
-                //$scope.list[item.id].content = "item "+ (item.id) + ": " + result;
+        // Calculate all initial positions and sizes of the list items
+        // and update list model
+        $scope.calcListPositions = function () {
+            for(var j = 0; j < $scope.list.length; j++) {
+                var y, i, j, k, l;
+                // calc positions of category boxes
+                y = 0;
+                for(i = 0; i < j; i++) {
+                    y = y + $scope.list[i].entries.length*(appOptions.listview.listItemHeight + appOptions.listview.listItemMargin );
+                }
+                y = appOptions.listview.margins[0] + y + (j * (appOptions.listview.catItemHeight + appOptions.listview.catItemMargin + appOptions.listview.catBoxMargin));
+                $scope.list[j].initialPos = [appOptions.listview.margins[3],y];
 
-                return result;
-            } else
-                return 0;
+                // calc size of category boxes
+                y = appOptions.listview.catItemHeight + appOptions.listview.catItemMargin ;
+                y = y + ($scope.list[j].entries.length)*(appOptions.listview.listItemHeight + appOptions.listview.listItemMargin );
+                $scope.list[j].initialSize = [appOptions.appSize[0]-appOptions.listview.margins[1]-appOptions.listview.margins[3], y ];
+
+                // loop through all entries
+                for ( k = 0; k < $scope.list[j].entries.length; k++) {
+                    // calc positions of item boxes
+                    y = 0;
+                    for(var l = 0; l < j; l++) {
+                        y = y + $scope.list[l].entries.length*(appOptions.listview.listItemHeight + appOptions.listview.listItemMargin );
+                    }
+                    y = appOptions.listview.margins[0] + y + (j * appOptions.listview.catBoxMargin) + ((j+1) * (appOptions.listview.catItemHeight + appOptions.listview.catItemMargin)) + (k * (appOptions.listview.listItemHeight + appOptions.listview.listItemMargin )) ;
+                    $scope.list[j].entries[k].initialPos = [appOptions.listview.margins[3],y];
+
+                    // calc of item boxes
+                    y = appOptions.listview.listItemHeight;
+                    $scope.list[j].entries[k].initialSize =  [appOptions.appSize[0]-appOptions.listview.margins[1]-appOptions.listview.margins[3], y ];
+
+                }
+
+            }
         };
 
-        $scope.itemPosition = function(item){
-            _scrollView = _scrollView || $famous.find('#scrollview-1')[0].renderNode;
-            if(_scrollView && _scrollView._node){
-                var page = _scrollView._node.index;
-                var absPosition = _height * page + _scrollView.getPosition();
-                var heightRange = 100;
-                var heightOffset = 200;
-                var result = 0;
+        // Execute calculations
+        $scope.calcListPositions();
 
-                result = (item.id*_height - absPosition - heightOffset);
-                result = Math.max(Math.min(result, heightRange), -heightRange);
-                result = (1-Math.abs(result/heightRange))*10;
-                //$scope.list[item.id].content = "item "+ (item.id) + ": " + result;
-
-                return [result,0];
-            } else
-                return [50,0];
+        // Helper functions to get positions and sizes
+        $scope.getCategoryBoxPos = function (catindex) {
+            return $scope.list[catindex].initialPos;
         };
 
+        $scope.getItemBoxPos = function (catindex, itemindex) {
+            return $scope.list[catindex].entries[itemindex].initialPos;
+        };
+
+        $scope.getCategoryBoxSize = function (catindex) {
+            return $scope.list[catindex].initialSize;
+        };
+
+        $scope.getItemBoxSize = function (catindex, itemindex) {
+            return $scope.list[catindex].entries[itemindex].initialSize;
+        };
+
+        $scope.getNavSubheaderPos = function () {
+            return [0, -1 - $scope.scrollPos/3 ,1]
+        }
 
 
-        // use scrollview.sync - activated by Engine (strange hack?)
+        $scope.scrollPos = 0;
+        // Parallax
         $scope.myflag = false;
         Engine.on('prerender',function(){
             var _scrollView = undefined;
@@ -123,29 +120,30 @@ angular.module('famousApp')
             if(_scrollView && _scrollView._node){
                 if ($scope.myflag==false) {
                     $scope.myflag=true;
-
-
+                    console.log("one time, baby!");
                     _scrollView.sync.on('update',function(e){
-                        // $apply to show values in list..
-                        // $scope.$apply();
-                        //console.log(_scrollView._node.index);
-                        //console.log(_scrollView._node.index*100 + + _scrollView.getPosition());
+                        $scope.scrollPos = (_scrollView._node.index*100 + + _scrollView.getPosition());
                     });
                 }
             }
-
         });
 
+
+        // Resizing
         Engine.on('resize',function(){
             // Update app-size - only for fullsize device!
             if (appOptions.device=="none") {
                 appOptions.appSize = [window.innerWidth, window.innerHeight];
+
+                // Without $apply Famo.us doesn't recognize the change
+                // Remember: appOptions is a factory (=singleton)
+                // - this means that appOptions and $scope.appOptions are the SAME object!
+                // - this is why the new .appWidth value is automatically available in the scope!
+                $scope.$apply();
+
+                // Execute calculations
+                $scope.calcListPositions();
             }
-            // Without $apply Famo.us doesn't recognize the change
-            // Remember: appOptions is a factory (=singleton)
-            // - this means that appOptions and $scope.appOptions are the SAME object!
-            // - this is why the new .appWidth value is automatically available in the scope!
-            $scope.$apply();
 
         });
 
@@ -153,49 +151,17 @@ angular.module('famousApp')
 
 
 
-        // Generate data for scroll-list
-        $scope.list = [];
-        for(var i = 0; i < 50; i++) {
-            $scope.list.push(
-                {   id: (i),
-                    content: ("item "+(i)),
-                    color: "'hsl(" + (i * 360 / 8) + ", 60%, 50%)'",
-                    width: 200,
-                    animateEnterScale: new Transitionable([1,1,1])
-                }
-            )
-        }
-
-
-        $scope.addItem = function (detailID) {
-
-            i = $scope.list.length;
-            $scope.list.push(
-                {   id: (i),
-                    content: ("item "+(i)),
-                    color: "'hsl(" + (i * 360 / 8) + ", 60%, 50%)'",
-                    width: 200,
-                    animateEnterScale: new Transitionable([1,1,1])
-                }
-            )
-
-        }
-
-        $scope.enterItem = function(item, $done) {
-            console.log("ENTER!");
-            item.animateEnterScale.set([0.001,0.001,0.001]);
-            item.animateEnterScale.set([1,1,1], {duration:1000, curve:"easeOut"}, $done);
-
-        }
-
+        //
+        // popup detail card
+        //
 
         $scope.navigateToDetail = function (detailID) {
             $state.go('app.list.detail', {detail: detailID})
-        }
+        };
 
         $scope.navigateToList = function () {
             $state.go('app.list.detail', {detail: 0})
-        }
+        };
 
 
         // Positioning of detailview
@@ -216,7 +182,6 @@ angular.module('famousApp')
 
                 // Prevent this state from completing
                 // evt.preventDefault();
-
 
         });
 
