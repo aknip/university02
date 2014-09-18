@@ -1,30 +1,45 @@
 <fa-view >
-    <fa-scroll-view id="scrollview-1" fa-pipe-from="myscrollEventHandler" fa-options="{direction: 1}">
 
-        <fa-view ng-repeat="item in list" fa-size="[undefined,51]">
-            <fa-modifier fa-translate="itemPosition(item)" >
-                <fa-modifier fa-translate="[0,0]" fa-scale="item.animateEnterScale.get()" >
-                    <fa-surface fa-pipe-to="myscrollEventHandler"
-                                fa-size="[50, 50]"
-                                fa-background-color="{{item.color}}"
-                                ng-class="'listItem'"
-                                ng-click="navigateToDetail(item.id)">
-                    </fa-surface>
-                </fa-modifier>
-                <fa-modifier fa-translate="[51,0]"
-                             fa-size="[appOptions.appSize[0]-51, 50]"
-                             fa-opacity="itemOpacity(item)"
-                             fa-scale="item.animateEnterScale.get()">
-                    <fa-surface fa-pipe-to="myscrollEventHandler"
-                                fa-background-color="{{item.color}}"
-                                ng-class="'listItem'"
-                                ng-click="addItem(item.id)">
-                        {{item.content}} {{appOptions.appSize[0]}}
-                    </fa-surface>
-                </fa-modifier>
-            </fa-modifier>
-        </fa-view>
-    </fa-scroll-view>
+    <fa-modifier  fa-translate="[0,-1,1]">
+        <fa-surface ng-class="'navsubheader'" fa-size="[undefined, 55]">
+            Headline
+        </fa-surface>
+    </fa-modifier>
+    <fa-modifier  fa-translate="[0,53]">
+        <fa-surface fa-background-color="'#eee'" >
+        </fa-surface>
+    </fa-modifier>
+
+    <fa-modifier fa-translate="[20,20,2]">
+        <fa-container-surface fa-options="{size: [appOptions.appSize[0]-40, undefined], properties: {overflow: 'hidden'}}">
+            <fa-scroll-view id="scrollview-1" fa-pipe-from="myscrollEventHandler" fa-options="{direction: 1}">
+
+                <fa-view ng-repeat="item in list" fa-size="[undefined,51]">
+                    <fa-modifier fa-translate="itemPosition(item)" >
+                        <fa-modifier fa-translate="[0,55]" fa-scale="item.animateEnterScale.get()" >
+                            <fa-surface fa-pipe-to="myscrollEventHandler"
+                                        fa-size="[50, 50]"
+                                        fa-background-color="{{item.color}}"
+                                        ng-class="'listItem'"
+                                        ng-click="navigateToDetail(item.id)">
+                            </fa-surface>
+                        </fa-modifier>
+                        <fa-modifier fa-translate="[51,55]"
+                                     fa-size="[appOptions.appSize[0]-91, 50]"
+                                     fa-opacity="itemOpacity(item)"
+                                     fa-scale="item.animateEnterScale.get()">
+                            <fa-surface fa-pipe-to="myscrollEventHandler"
+                                        fa-background-color="{{item.color}}"
+                                        ng-class="'listItem'"
+                                        ng-click="addItem(item.id)">
+                                {{item.content}} {{appOptions.appSize[0]}}
+                            </fa-surface>
+                        </fa-modifier>
+                    </fa-modifier>
+                </fa-view>
+            </fa-scroll-view>
+        </fa-container-surface>
+    </fa-modifier>
+
     <div ui-view="detailView"></div>
-
 </fa-view>
