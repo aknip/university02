@@ -2,7 +2,7 @@
 
     <fa-modifier  fa-translate="getNavSubheaderPos()">
         <fa-surface ng-class="'navsubheader'" fa-size="[undefined, 150]">
-            Welcome!
+            Welcome !
         </fa-surface>
     </fa-modifier>
     <fa-modifier  fa-translate="[0,0]">
@@ -15,23 +15,23 @@
             <fa-scroll-view id="scrollview-1" fa-pipe-from="myscrollEventHandler" fa-options="{direction: 1}">
                 <fa-view fa-size="[undefined, 1200]">
                     <fa-view ng-repeat="catitem in list" ng-init="catIndex = $index">
-                        <fa-modifier fa-translate="getCategoryBoxPos(catIndex)"
-                                     fa-size="getCategoryBoxSize(catIndex)">
+                        <fa-modifier fa-translate="catitem.transitPos.get()"
+                                     fa-size="catitem.transitSize.get()">
                             <fa-surface fa-pipe-to="myscrollEventHandler"
                                         fa-background-color="{{catitem.color}}"
                                         ng-class="'listCategoryItem'"
-                                        ng-click="addItem(catitem.id)">
+                                        ng-click="">
                                 {{catitem.category}} {{catitem.title}}
                             </fa-surface>
                         </fa-modifier>
 
                     <fa-view ng-repeat="entryitem in catitem.entries" ng-init="entryIndex = $index">
-                        <fa-modifier fa-translate="getItemBoxPos(catIndex, entryIndex)"
-                                     fa-size="getItemBoxSize(catIndex, entryIndex)">
+                        <fa-modifier fa-translate="entryitem.transitPos.get()"
+                                     fa-size="entryitem.transitSize.get()">
                             <fa-surface fa-pipe-to="myscrollEventHandler"
                                         fa-background-color="{{entryitem.color}}"
                                         ng-class="'listEntryItem'"
-                                        ng-click="addItem(entryitem.id)">
+                                        ng-click="testListAnimation(catIndex, entryIndex)">
                                 {{entryitem.title}}
                             </fa-surface>
                         </fa-modifier>

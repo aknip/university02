@@ -23,3 +23,40 @@ Embedded in "Dynamic Presentation Frame":
 - require.js dependency removed
 - stripped down some details
 
+
+### Installation
+
+  1. Make sure that you have [npm](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm) installed
+  2. In your terminal, run `npm install -g gulp`
+  3. In your terminal, run `npm install` to install package dependencies, including bower dependencies
+  4. (Make sure that phantomjs was installed inside of your npm_modules, otherwise: npm install --save-dev phantomjs
+
+
+### Development WATCH mode
+
+  1. In your terminal, run `gulp watch`
+  2. You should then be able to open the app at http://localhost:9000.  The page will auto-reload when you make changes to the app.
+
+
+### Plain SERVE mode
+
+  1. In your terminal, run `gulp serve`
+
+
+### Unit Test Jasmine
+
+  - In your terminal, run `gulp unit-test`: this starts the server, executes karma and closes everything
+
+
+### e2e Test Jasmine
+
+  - In your terminal, run `gulp protractor-jasmine`: this starts the server, executes protractor and closes everything
+  - In your terminal, run `gulp protractor-jasmine-only`: this requires a running server ('gulp serve') and only executes protractor
+  - Browser configuration is done in protractor-jasmine.conf.js
+
+### e2e Test Cucumber
+
+  - In your terminal, run `gulp protractor-cucumber`: this starts the server, executes protractor and closes everything
+  - In your terminal, run `gulp protractor-cucumber-only`: this requires a running server ('gulp serve') and only executes protractor
+  - Browser configuration is done in protractor-cucumber.conf.js
+

@@ -96,3 +96,9 @@ body {
     padding: 7px 10px 0 10px;
     color: #aaa;
 }
+
+.detailcard {
+    background-color: #2d5d81;
+    color: white;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0, 0.5);
+}

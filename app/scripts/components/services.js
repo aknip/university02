@@ -63,28 +63,30 @@ angular.module('famousApp')
                     color: "'white'",
                     initialPos: [undefined, undefined],
                     initialSize: [undefined, undefined],
+                    transitPos: undefined,
+                    transitSize: undefined,
                     entries: [
                         {
                             id: '11',
                             title: 'Eintrag 1.1',
                             color: "'#dfdfdf'",
                             initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
+                            initialSize: [undefined, undefined],
+                            transitPos: undefined,
+                            transitSize: undefined,
+                            status: 'closed'
                         },
                         {
                             id: '12',
                             title: 'Eintrag 1.2',
                             color: "'#dfdfdf'",
                             initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
-                        },
-                        {
-                            id: '13',
-                            title: 'Eintrag 1.3',
-                            color: "'#dfdfdf'",
-                            initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
-                        }]
+                            initialSize: [undefined, undefined],
+                            transitPos: undefined,
+                            transitSize: undefined,
+                            status: 'closed'
+                        }
+                    ]
                 },
                 {
                     id: '2',
@@ -97,15 +99,22 @@ angular.module('famousApp')
                             title: 'Eintrag 2.1',
                             color: "'#dfdfdf'",
                             initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
+                            initialSize: [undefined, undefined],
+                            transitPos: undefined,
+                            transitSize: undefined,
+                            status: 'closed'
                         },
                         {
                             id: '2.2',
                             title: 'Eintrag 2.2',
                             color: "'#dfdfdf'",
                             initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
-                        }]
+                            initialSize: [undefined, undefined],
+                            transitPos: undefined,
+                            transitSize: undefined,
+                            status: 'closed'
+                        }
+                    ]
                 },
                 {
                     id: '3',
@@ -120,29 +129,32 @@ angular.module('famousApp')
                             title: 'Eintrag 3.1',
                             color: "'#dfdfdf'",
                             initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
+                            initialSize: [undefined, undefined],
+                            transitPos: undefined,
+                            transitSize: undefined,
+                            status: 'closed'
                         },
                         {
                             id: '32',
                             title: 'Eintrag 3.2',
                             color: "'#dfdfdf'",
                             initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
+                            initialSize: [undefined, undefined],
+                            transitPos: undefined,
+                            transitSize: undefined,
+                            status: 'closed'
                         },
                         {
                             id: '33',
                             title: 'Eintrag 3.3',
                             color: "'#dfdfdf'",
                             initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
-                        },
-                        {
-                            id: '34',
-                            title: 'Eintrag 3.4',
-                            color: "'#dfdfdf'",
-                            initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
-                        }]
+                            initialSize: [undefined, undefined],
+                            transitPos: undefined,
+                            transitSize: undefined,
+                            status: 'closed'
+                        }
+                    ]
                 },
                 {
                     id: '4',
@@ -151,34 +163,48 @@ angular.module('famousApp')
                     color: "'white'",
                     initialPos: [undefined, undefined],
                     initialSize: [undefined, undefined],
+                    transitPos: undefined,
+                    transitSize: undefined,
                     entries: [
                         {
                             id: '41',
                             title: 'Eintrag 4.1',
                             color: "'#dfdfdf'",
                             initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
+                            initialSize: [undefined, undefined],
+                            transitPos: undefined,
+                            transitSize: undefined,
+                            status: 'closed'
                         },
                         {
                             id: '42',
                             title: 'Eintrag 4.2',
                             color: "'#dfdfdf'",
                             initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
+                            initialSize: [undefined, undefined],
+                            transitPos: undefined,
+                            transitSize: undefined,
+                            status: 'closed'
                         },
                         {
                             id: '43',
                             title: 'Eintrag 4.3',
                             color: "'#dfdfdf'",
                             initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
+                            initialSize: [undefined, undefined],
+                            transitPos: undefined,
+                            transitSize: undefined,
+                            status: 'closed'
                         },
                         {
                             id: '44',
                             title: 'Eintrag 4.4',
                             color: "'#dfdfdf'",
                             initialPos: [undefined, undefined],
-                            initialSize: [undefined, undefined]
+                            initialSize: [undefined, undefined],
+                            transitPos: undefined,
+                            transitSize: undefined,
+                            status: 'closed'
                         }]
                 }
             ];

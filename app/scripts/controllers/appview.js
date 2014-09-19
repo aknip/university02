@@ -53,13 +53,13 @@ angular.module('famousApp')
         // and update list model
         $scope.calcListPositions = function () {
             for(var j = 0; j < $scope.list.length; j++) {
-                var y, i, j, k, l;
                 // calc positions of category boxes
-                y = 0;
-                for(i = 0; i < j; i++) {
+                var y = 0;
+                for(var i = 0; i < j; i++) {
                     y = y + $scope.list[i].entries.length*(appOptions.listview.listItemHeight + appOptions.listview.listItemMargin );
                 }
                 y = appOptions.listview.margins[0] + y + (j * (appOptions.listview.catItemHeight + appOptions.listview.catItemMargin + appOptions.listview.catBoxMargin));
+                //$scope.list[j].initialPos = [appOptions.listview.margins[3],y];
                 $scope.list[j].initialPos = [appOptions.listview.margins[3],y];
 
                 // calc size of category boxes
@@ -68,7 +68,7 @@ angular.module('famousApp')
                 $scope.list[j].initialSize = [appOptions.appSize[0]-appOptions.listview.margins[1]-appOptions.listview.margins[3], y ];
 
                 // loop through all entries
-                for ( k = 0; k < $scope.list[j].entries.length; k++) {
+                for ( var k = 0; k < $scope.list[j].entries.length; k++) {
                     // calc positions of item boxes
                     y = 0;
                     for(var l = 0; l < j; l++) {
@@ -79,54 +79,176 @@ angular.module('famousApp')
 
                     // calc of item boxes
                     y = appOptions.listview.listItemHeight;
-                    $scope.list[j].entries[k].initialSize =  [appOptions.appSize[0]-appOptions.listview.margins[1]-appOptions.listview.margins[3], y ];
+                    $scope.list[j].entries[k].initialSize = [appOptions.appSize[0]-appOptions.listview.margins[1]-appOptions.listview.margins[3], y ];
 
                 }
 
+            }
+
+            // create transitionables
+            for(var i = 0; i < $scope.list.length; i++){
+                // category transitionables
+                $scope.list[i].transitPos = new Transitionable($scope.list[i].initialPos);
+                $scope.list[i].transitSize = new Transitionable($scope.list[i].initialSize);
+                // item transitionables
+                for(var j = 0; j < $scope.list[i].entries.length; j++){
+                    $scope.list[i].entries[j].transitPos = new Transitionable($scope.list[i].entries[j].initialPos);
+                    $scope.list[i].entries[j].transitSize = new Transitionable($scope.list[i].entries[j].initialSize);
+                }
             }
         };
 
         // Execute calculations
         $scope.calcListPositions();
 
-        // Helper functions to get positions and sizes
-        $scope.getCategoryBoxPos = function (catindex) {
-            return $scope.list[catindex].initialPos;
-        };
-
-        $scope.getItemBoxPos = function (catindex, itemindex) {
-            return $scope.list[catindex].entries[itemindex].initialPos;
-        };
-
-        $scope.getCategoryBoxSize = function (catindex) {
-            return $scope.list[catindex].initialSize;
-        };
-
-        $scope.getItemBoxSize = function (catindex, itemindex) {
-            return $scope.list[catindex].entries[itemindex].initialSize;
-        };
-
-        $scope.getNavSubheaderPos = function () {
-            return [0, -1 - $scope.scrollPos/3 ,1]
-        }
 
 
-        $scope.scrollPos = 0;
-        // Parallax
+        // Parallax event management
         $scope.myflag = false;
+        $scope.scrollPos = 0;
         Engine.on('prerender',function(){
             var _scrollView = undefined;
             _scrollView = _scrollView || $famous.find('#scrollview-1')[0].renderNode;
             if(_scrollView && _scrollView._node){
                 if ($scope.myflag==false) {
+                    // this is called just for one time
                     $scope.myflag=true;
-                    console.log("one time, baby!");
                     _scrollView.sync.on('update',function(e){
                         $scope.scrollPos = (_scrollView._node.index*100 + + _scrollView.getPosition());
                     });
                 }
             }
         });
+
+        // Parallax scrolling for NavSubheader
+        $scope.getNavSubheaderPos = function () {
+            return [0, -1 - $scope.scrollPos/3 ,1]
+        };
+
+
+        var sumArrays = function(array1, array2) {
+            var result=[];
+            for(var i = 0; i < array1.length; i++){
+                result.push(array1[i] + array2[i]);
+            }
+            return result;
+        } ;
+
+
+        //
+        // Animation for detail expand
+        //
+        $scope.testListAnimation = function(catIndex, entryIndex) {
+
+            if ($scope.list[catIndex].entries[entryIndex].status == 'closed') {
+
+                $scope.list[catIndex].entries[entryIndex].status = 'open';
+
+                var spread = 100;
+
+                // move everything above up
+                for(var i = 0; i < catIndex; i++){
+                    // move categories
+                    $scope.list[i].transitPos.set(
+                        sumArrays($scope.list[i].transitPos.get(), [0,-spread]),
+                        {duration: 1000, curve: Easing.outElastic}
+                    );
+                    // move items
+                    for(var j = 0; j < $scope.list[i].entries.length; j++){
+                        $scope.list[i].entries[j].transitPos.set(
+                            sumArrays($scope.list[i].entries[j].transitPos.get(), [0,-spread]),
+                            {duration: 1000, curve: Easing.outElastic}
+                        );
+                    }
+                }
+
+
+                // move items inside selected category
+                // move category
+                $scope.list[catIndex].transitPos.set(
+                    sumArrays($scope.list[i].transitPos.get(), [0,-spread]),
+                    {duration: 1000, curve: Easing.outElastic}
+                );
+                // move items above up
+                for(var j = 0; j < entryIndex; j++){
+                    $scope.list[catIndex].entries[j].transitPos.set(
+                        sumArrays($scope.list[catIndex].entries[j].transitPos.get(), [0,-spread]),
+                        {duration: 1000, curve: Easing.outElastic}
+                    );
+                }
+                // move items below down
+                for(var j = (entryIndex+1); j < $scope.list[catIndex].entries.length; j++){
+                    $scope.list[catIndex].entries[j].transitPos.set(
+                        sumArrays($scope.list[catIndex].entries[j].transitPos.get(), [0,+spread]),
+                        {duration: 1000, curve: Easing.outElastic}
+                    );
+                }
+                // change size of category box
+                $scope.list[catIndex].transitSize.set(
+                    sumArrays($scope.list[catIndex].transitSize.get(), [0,2*spread]),
+                    {duration: 1000, curve: Easing.outElastic}
+                );
+                // move detail box up & left
+                $scope.list[catIndex].entries[entryIndex].transitPos.set(
+                    sumArrays($scope.list[catIndex].entries[entryIndex].transitPos.get(), [-15,-spread]),
+                    {duration: 1000, curve: Easing.outElastic}
+                );
+
+                // change size of detail box
+                $scope.list[catIndex].entries[entryIndex].transitSize.set(
+                    sumArrays($scope.list[catIndex].entries[entryIndex].transitSize.get(), [30,2*spread]),
+                    {duration: 1000, curve: Easing.outElastic}
+                );
+
+
+
+                // move everything below down
+                for(var i = (catIndex+1); i <= $scope.list.length; i++){
+                    // move categories
+                    $scope.list[i].transitPos.set(
+                        sumArrays($scope.list[i].transitPos.get(), [0,+spread]),
+                        {duration: 1000, curve: Easing.outElastic}
+                    );
+                    // move items
+                    for(var j = 0; j < $scope.list[i].entries.length; j++){
+                        $scope.list[i].entries[j].transitPos.set(
+                            sumArrays($scope.list[i].entries[j].transitPos.get(), [0,+spread]),
+                            {duration: 1000, curve: Easing.outElastic}
+                        );
+                    }
+                }
+
+            }
+
+            else {
+                // Close everything
+                $scope.list[catIndex].entries[entryIndex].status = 'closed';
+                //
+                for(var i = 0; i < $scope.list.length; i++){
+                    // category transitionables
+                    $scope.list[i].transitPos.set(
+                        $scope.list[i].initialPos,
+                        {duration: 1000, curve: Easing.outElastic}
+                    );
+                    $scope.list[i].transitSize.set(
+                        $scope.list[i].initialSize,
+                        {duration: 1000, curve: Easing.outElastic}
+                    );
+                    // item transitionables
+                    for(var j = 0; j < $scope.list[i].entries.length; j++){
+                        $scope.list[i].entries[j].transitPos.set(
+                            $scope.list[i].entries[j].initialPos,
+                            {duration: 1000, curve: Easing.outElastic}
+                        );
+                        $scope.list[i].entries[j].transitSize.set(
+                            $scope.list[i].entries[j].initialSize,
+                            {duration: 1000, curve: Easing.outElastic}
+                        );
+                    }
+                }
+            }
+
+        };
 
 
         // Resizing
@@ -165,7 +287,7 @@ angular.module('famousApp')
 
 
         // Positioning of detailview
-        $scope.animateDetail = new Transitionable([20,600,5]);
+        $scope.animateDetail = new Transitionable([35,600,5]);
 
 
         // Animation of detailview
@@ -175,9 +297,9 @@ angular.module('famousApp')
                 $scope.detailID = toParams.detail;
 
                 if (toParams.detail > 0) {
-                    $scope.animateDetail.set([20, 20, 5], {duration: 1000, curve: Easing.outElastic});
+                    $scope.animateDetail.set([35, 80, 5], {duration: 1000, curve: Easing.outElastic});
                 } else {
-                    $scope.animateDetail.set([20, 600, 5], {duration: 300, curve: Easing.inOutQuad});
+                    $scope.animateDetail.set([35, 600, 5], {duration: 300, curve: Easing.inOutQuad});
                 }
 
                 // Prevent this state from completing
