@@ -4,3 +4,4 @@ dist
 .tmp
 .sass-cache
 app/bower_components
+app/icon-fonts/streamline-icons

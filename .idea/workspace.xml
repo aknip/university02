@@ -2,12 +2,118 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88ebd7f9-62b2-4515-a244-2ef9712ab77e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/famous.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/css/font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/core.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/icons.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/larger.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/list.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/path.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/spinning.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/less/variables.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/_spinning.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/font-awesome-4.2.0/scss/font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Bold/OpenSans-Bold.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Bold/OpenSans-Bold.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Bold/OpenSans-Bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Bold/OpenSans-Bold.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/BoldItalic/OpenSans-BoldItalic.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/BoldItalic/OpenSans-BoldItalic.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/BoldItalic/OpenSans-BoldItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/BoldItalic/OpenSans-BoldItalic.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/ExtraBold/OpenSans-ExtraBold.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/ExtraBold/OpenSans-ExtraBold.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/ExtraBold/OpenSans-ExtraBold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/ExtraBold/OpenSans-ExtraBold.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Italic/OpenSans-Italic.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Italic/OpenSans-Italic.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Italic/OpenSans-Italic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Italic/OpenSans-Italic.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Light/OpenSans-Light.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Light/OpenSans-Light.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Light/OpenSans-Light.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Light/OpenSans-Light.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/LightItalic/OpenSans-LightItalic.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/LightItalic/OpenSans-LightItalic.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/LightItalic/OpenSans-LightItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/LightItalic/OpenSans-LightItalic.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Regular/OpenSans-Regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Regular/OpenSans-Regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Regular/OpenSans-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Regular/OpenSans-Regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Semibold/OpenSans-Semibold.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Semibold/OpenSans-Semibold.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Semibold/OpenSans-Semibold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/Semibold/OpenSans-Semibold.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/SemiboldItalic/OpenSans-SemiboldItalic.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/SemiboldItalic/OpenSans-SemiboldItalic.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/SemiboldItalic/OpenSans-SemiboldItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/fonts/SemiboldItalic/OpenSans-SemiboldItalic.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/open-sans.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/open-sans.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/open-sans.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/Roboto-Black.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/Roboto-BlackItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/Roboto-Bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/Roboto-BoldItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/Roboto-Italic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/Roboto-Light.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/Roboto-LightItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/Roboto-Medium.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/Roboto-MediumItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/Roboto-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/Roboto-Thin.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/Roboto-ThinItalic.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/web-fonts/roboto/roboto.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/e2e/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/protractor.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/main.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/appview.html" afterPath="$PROJECT_DIR$/app/views/appview.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/appview.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/appview.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/listview-detail.html" afterPath="$PROJECT_DIR$/app/views/listview-detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp/e2e-tests.js" afterPath="$PROJECT_DIR$/gulp/e2e-tests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/karma.conf.js" afterPath="$PROJECT_DIR$/test/karma.conf.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/listview.html" afterPath="$PROJECT_DIR$/app/views/listview.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/components/services.js" afterPath="$PROJECT_DIR$/app/scripts/components/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp/unit-tests.js" afterPath="$PROJECT_DIR$/gulp/unit-tests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp/watch.js" afterPath="$PROJECT_DIR$/gulp/watch.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="university02.iws" />
@@ -31,93 +137,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="listview.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/listview.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="2066" selection-end="2066" vertical-scroll-proportion="-17.75" vertical-offset="144" max-vertical-offset="810">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="presentationframe.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/components/app-presentationframe/presentationframe.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="52" selection-start="2518" selection-end="2518" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="975">
-              <folding>
-                <marker date="1410964397000" expanded="true" signature="355:404" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appview.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/appview.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="51" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="555">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/components/services.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="6" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.0" vertical-offset="604" max-vertical-offset="3255">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/styles/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="42" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0" vertical-offset="932" max-vertical-offset="1635">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appview.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/appview.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="240" column="70" selection-start="10793" selection-end="10793" vertical-scroll-proportion="0.77700347" vertical-offset="3154" max-vertical-offset="4770">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="540">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="32" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="855">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listview-detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/listview-detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="14" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="180">
+            <state line="17" column="22" selection-start="520" selection-end="520" vertical-scroll-proportion="0.4775281" vertical-offset="0" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
@@ -141,22 +164,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
-        <option value="$PROJECT_DIR$/app/scripts/components/app-presentationframe/presentationframe.js" />
-        <option value="$PROJECT_DIR$/app/views/appview.html" />
-        <option value="$PROJECT_DIR$/app/styles/main.css" />
-        <option value="$PROJECT_DIR$/app/views/listview-detail.html" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/test/karma.conf.js" />
+        <option value="$PROJECT_DIR$/gulp/watch.js" />
+        <option value="$PROJECT_DIR$/test/protractor-cucumber.conf.js" />
+        <option value="$PROJECT_DIR$/test/e2e-cucumber/stepDefinitions.js" />
+        <option value="$PROJECT_DIR$/test/e2e-cucumber/lib.feature" />
+        <option value="$PROJECT_DIR$/gulp/e2e-tests.js" />
+        <option value="$PROJECT_DIR$/test/e2e-jasmine/main.js" />
+        <option value="$PROJECT_DIR$/test/protractor-jasmine.conf.js" />
+        <option value="$PROJECT_DIR$/app/views/homeview.html" />
         <option value="$PROJECT_DIR$/app/scripts/components/services.js" />
+        <option value="$PROJECT_DIR$/app/views/appview.html" />
         <option value="$PROJECT_DIR$/app/views/listview.html" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/listview.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/appview.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
-    <option name="width" value="1038" />
+    <option name="width" value="960" />
     <option name="height" value="874" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -200,6 +229,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="university02" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="university02" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="university02" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,6 +358,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="university02" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="university02" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icon-fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="streamline-icons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="university02" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="university02" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icon-fonts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="streamline-icons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="streamline-30px" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -331,6 +422,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/views" />
+      <recent name="$PROJECT_DIR$/app/scripts/controllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -375,14 +467,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1038" height="874" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="22" width="960" height="874" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.08222812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25464192" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24916574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17536946" sideWeight="0.9177719" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27214515" sideWeight="0.7453581" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -396,6 +488,25 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.08222812" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24916574" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2504" sideWeight="0.9177719" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -409,116 +520,119 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/appview.html">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+        <state line="58" column="51" selection-start="1995" selection-end="2019" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1020">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/listview-detail.html">
+    <entry file="file://$PROJECT_DIR$/test/e2e-cucumber/stepDefinitions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/listview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="36" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/appview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="56" selection-start="3261" selection-end="3293" vertical-scroll-proportion="0.0" vertical-offset="907" max-vertical-offset="2100">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/appview.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/listview-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/components/app-presentationframe/presentationframe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="52" selection-start="2518" selection-end="2518" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+        <state line="37" column="0" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.0" vertical-offset="149" max-vertical-offset="660">
           <folding>
-            <marker date="1410964397000" expanded="true" signature="355:404" placeholder="..." />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+    <entry file="file://$PROJECT_DIR$/test/e2e-cucumber/lib.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+        <state line="13" column="48" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/appview.html">
+    <entry file="file://$PROJECT_DIR$/gulp/e2e-tests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="51" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="555">
+        <state line="26" column="6" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="930">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+    <entry file="file://$PROJECT_DIR$/test/e2e-jasmine/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="42" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0" vertical-offset="932" max-vertical-offset="1635">
+        <state line="17" column="42" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <marker date="1411240236000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/protractor-jasmine.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="720">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/listview-detail.html">
+    <entry file="file://$PROJECT_DIR$/test/protractor-cucumber.conf.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="14" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="32" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="855">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="797" selection-end="797" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+        <state line="19" column="39" selection-start="609" selection-end="609" vertical-scroll-proportion="0.54702497" vertical-offset="0" max-vertical-offset="795">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/components/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="6" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.0" vertical-offset="604" max-vertical-offset="3255">
+        <state line="41" column="14" selection-start="1336" selection-end="1336" vertical-scroll-proportion="1.1804223" vertical-offset="0" max-vertical-offset="3630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/homeview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="18" selection-start="133" selection-end="133" vertical-scroll-proportion="0.0882353" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/listview-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/listview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="2066" selection-end="2066" vertical-scroll-proportion="-17.75" vertical-offset="144" max-vertical-offset="810">
+        <state line="43" column="37" selection-start="2525" selection-end="2525" vertical-scroll-proportion="0.36619717" vertical-offset="463" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/listview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="611" selection-end="611" vertical-scroll-proportion="0.42168674" vertical-offset="0" max-vertical-offset="498">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/appview.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="70" selection-start="10793" selection-end="10793" vertical-scroll-proportion="0.77700347" vertical-offset="3154" max-vertical-offset="4770">
+        <state line="46" column="0" selection-start="1760" selection-end="1760" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="4920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/appview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="530" selection-end="530" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="585">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="11" selection-start="886" selection-end="886" vertical-scroll-proportion="0.15822785" vertical-offset="255" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="22" selection-start="520" selection-end="520" vertical-scroll-proportion="0.4775281" vertical-offset="0" max-vertical-offset="885">
           <folding />
         </state>
       </provider>

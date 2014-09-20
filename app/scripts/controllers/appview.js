@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('famousApp')
-    .controller('appview', function ($scope, $famous, $state, appOptions, appData, menuData) {
+
+    .controller('appviewCtrl', function ($scope, $famous, $state, appOptions, appData, menuData) {
         var View = $famous['famous/core/View'];
         var Modifier = $famous['famous/core/Modifier'];
         var Surface = $famous['famous/core/Surface'];
@@ -10,7 +11,6 @@ angular.module('famousApp')
         var Easing = $famous['famous/transitions/Easing'];
         var EventHandler = $famous['famous/core/EventHandler'];
         var Engine = $famous['famous/core/Engine'];
-
 
         $scope.appOptions = appOptions;
 
@@ -38,11 +38,11 @@ angular.module('famousApp')
 
         $scope.sideNavElements = menuData;
 
+        $scope.navigateMainMenu = function (targetState) {
+            $state.go(targetState);
+            //window.location = "http://localhost:9000/#/app/list/";
 
-        // Handle scroll event
-        $scope.myscrollEventHandler = new EventHandler();
-        Engine.pipe($scope.myscrollEventHandler);
-
+        };
 
 
         // Generate data for scroll-list
@@ -102,22 +102,29 @@ angular.module('famousApp')
         $scope.calcListPositions();
 
 
+        // Handle scroll event
+        $scope.myscrollEventHandler = new EventHandler();
+        Engine.pipe($scope.myscrollEventHandler);
+
 
         // Parallax event management
         $scope.myflag = false;
         $scope.scrollPos = 0;
         Engine.on('prerender',function(){
-            var _scrollView = undefined;
-            _scrollView = _scrollView || $famous.find('#scrollview-1')[0].renderNode;
-            if(_scrollView && _scrollView._node){
-                if ($scope.myflag==false) {
-                    // this is called just for one time
-                    $scope.myflag=true;
-                    _scrollView.sync.on('update',function(e){
-                        $scope.scrollPos = (_scrollView._node.index*100 + + _scrollView.getPosition());
-                    });
+            if ($state.current.name == "app.list.detail") {
+                var _scrollView = undefined;
+                _scrollView = _scrollView || $famous.find('#scrollview-1')[0].renderNode;
+                if(_scrollView && _scrollView._node){
+                    if ($scope.myflag==false) {
+                        // this is called just for one time
+                        $scope.myflag=true;
+                        _scrollView.sync.on('update',function(e){
+                            $scope.scrollPos = (_scrollView._node.index*100 + + _scrollView.getPosition());
+                        });
+                    }
                 }
             }
+
         });
 
         // Parallax scrolling for NavSubheader
@@ -203,7 +210,7 @@ angular.module('famousApp')
 
 
                 // move everything below down
-                for(var i = (catIndex+1); i <= $scope.list.length; i++){
+                for(var i = (catIndex+1); i < $scope.list.length; i++){
                     // move categories
                     $scope.list[i].transitPos.set(
                         sumArrays($scope.list[i].transitPos.get(), [0,+spread]),
@@ -270,9 +277,6 @@ angular.module('famousApp')
         });
 
 
-
-
-
         //
         // popup detail card
         //
@@ -302,11 +306,17 @@ angular.module('famousApp')
                     $scope.animateDetail.set([35, 600, 5], {duration: 300, curve: Easing.inOutQuad});
                 }
 
+                console.log(toState);
+
                 // Prevent this state from completing
                 // evt.preventDefault();
 
-        });
+            });
+
 
     });
+
+
+
 
 

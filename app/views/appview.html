@@ -8,7 +8,8 @@
                 <fa-modifier fa-origin="[1, 0]" fa-translate = "sideTransitionable2.get()">
                     <fa-modifier fa-rotate = "sideTransitionable3.get()">
                         <fa-grid-layout fa-options="{ dimensions: [1, 6] }">
-                            <fa-surface ng-repeat="element in sideNavElements" ng-class="['side-view-button']" fa-background-color="element.bgcolor"> <i class="fa {{element.iconclass}}" ></i>
+                            <fa-surface ng-repeat="element in sideNavElements" ng-click="navigateMainMenu(element.targetState)" ng-class="['side-view-button']" fa-background-color="element.bgcolor">
+                                <i class="icon {{element.iconclass}}" ></i>
                             </fa-surface>
                         </fa-grid-layout>
                     </fa-modifier>
@@ -19,7 +20,8 @@
         <fa-view id="main">
             <fa-header-footer-layout>
                 <fa-modifier fa-translate = "[0,0,3]">
-                    <fa-surface fa-size="[undefined, 35]" ng-class="['navheader']" fa-click="menuToggle($event)"> <i class="fa fa-arrows-alt"></i>acme management app
+                    <fa-surface fa-size="[undefined, 35]" ng-class="['navheader']" fa-click="menuToggle($event)">
+                        <i class="icon icon-scroll-omnidirectional-2"></i>acme management app
                     </fa-surface>
                 </fa-modifier>
 

@@ -13,40 +13,43 @@ angular.module('famousApp')
             listview: {
                 margins: [50, 20, 0, 20],
                 catItemHeight: 30,
-                catItemMargin: 5,
+                catItemMargin: 15,
                 catBoxMargin: 10,
                 listItemHeight: 50,
-                listItemMargin: 5
+                listItemMargin: 24
             }
         };
         return configObject;
     })
 
     .factory('menuData', function () {
-        // remember: factory returns Singleton !
+        // remember: factory returns Singleton !!
         var menuObject = [
             {
-                iconclass: 'fa-css3',
-                bgcolor: 'rgba(77, 89, 102, 1)'
+                iconclass: 'icon-layers',
+                bgcolor: 'rgba(77, 89, 102, 1)',
+                targetState: 'app.home'
             },
             {
-                iconclass: 'fa-globe',
-                bgcolor: 'rgba(245, 132, 133, 1)'
+                iconclass: 'icon-star-2',
+                bgcolor: 'rgba(245, 132, 133, 1)',
+                targetState: 'app.news'
             },
             {
-                iconclass: 'fa-cloud-upload',
-                bgcolor: 'rgba(254, 197, 130, 1)'
+                iconclass: 'icon-plane-paper-1',
+                bgcolor: 'rgba(254, 197, 130, 1)',
+                targetState: 'app.list.detail'
             },
             {
-                iconclass: 'fa-dashboard',
+                iconclass: 'icon-cloud-download',
                 bgcolor: 'rgba(202, 152, 236, 1)'
             },
             {
-                iconclass: 'fa-mobile-phone',
+                iconclass: 'icon-delete-2-1',
                 bgcolor: 'rgba(69, 227, 189, 1)'
             },
             {
-                iconclass: 'fa-cogs',
+                iconclass: 'icon-setting-gears-2',
                 bgcolor: 'rgba(63, 71, 81, 1)'
             }
         ];
@@ -68,8 +71,10 @@ angular.module('famousApp')
                     entries: [
                         {
                             id: '11',
-                            title: 'Eintrag 1.1',
-                            color: "'#dfdfdf'",
+                            title: 'Titel zu Eintrag 1.1',
+                            content: 'Content mit einem etwas längeren Text, der auch dann...',
+                            img: 'listitem-01.jpg',
+                            date: '17.09.14',
                             initialPos: [undefined, undefined],
                             initialSize: [undefined, undefined],
                             transitPos: undefined,
@@ -78,8 +83,10 @@ angular.module('famousApp')
                         },
                         {
                             id: '12',
-                            title: 'Eintrag 1.2',
-                            color: "'#dfdfdf'",
+                            title: 'Überschrift Eintrag 1.2',
+                            content: 'Content mit einem etwas längeren Text, der auch dann...',
+                            img: 'listitem-02.jpg',
+                            date: '14.09.14',
                             initialPos: [undefined, undefined],
                             initialSize: [undefined, undefined],
                             transitPos: undefined,
@@ -96,8 +103,10 @@ angular.module('famousApp')
                     entries: [
                         {
                             id: '21',
-                            title: 'Eintrag 2.1',
-                            color: "'#dfdfdf'",
+                            title: 'Headline zu Eintrag 2.1',
+                            content: 'Content mit einem etwas längeren Text, der auch dann...',
+                            img: 'listitem-cat.jpg',
+                            date: '04.09.14',
                             initialPos: [undefined, undefined],
                             initialSize: [undefined, undefined],
                             transitPos: undefined,
@@ -106,8 +115,10 @@ angular.module('famousApp')
                         },
                         {
                             id: '2.2',
-                            title: 'Eintrag 2.2',
-                            color: "'#dfdfdf'",
+                            title: 'Überschrift Eintrag 2.2',
+                            content: 'Content mit einem etwas längeren Text, der auch dann...',
+                            img: 'listitem-03.jpg',
+                            date: '14.09.14',
                             initialPos: [undefined, undefined],
                             initialSize: [undefined, undefined],
                             transitPos: undefined,
@@ -126,8 +137,10 @@ angular.module('famousApp')
                     entries: [
                         {
                             id: '31',
-                            title: 'Eintrag 3.1',
-                            color: "'#dfdfdf'",
+                            title: 'Titel zu Eintrag 3.1',
+                            content: 'Content mit einem etwas längeren Text, der auch dann...',
+                            img: 'listitem-04.jpg',
+                            date: '14.09.14',
                             initialPos: [undefined, undefined],
                             initialSize: [undefined, undefined],
                             transitPos: undefined,
@@ -136,8 +149,10 @@ angular.module('famousApp')
                         },
                         {
                             id: '32',
-                            title: 'Eintrag 3.2',
-                            color: "'#dfdfdf'",
+                            title: 'Überschrift Eintrag 3.2',
+                            content: 'Content mit einem etwas längeren Text, der auch dann...',
+                            img: 'listitem-05.jpg',
+                            date: '14.09.14',
                             initialPos: [undefined, undefined],
                             initialSize: [undefined, undefined],
                             transitPos: undefined,
@@ -146,8 +161,10 @@ angular.module('famousApp')
                         },
                         {
                             id: '33',
-                            title: 'Eintrag 3.3',
-                            color: "'#dfdfdf'",
+                            title: 'Headline zu Eintrag 3.3',
+                            content: 'Content mit einem etwas längeren Text, der auch dann...',
+                            img: 'listitem-06.jpg',
+                            date: '14.09.14',
                             initialPos: [undefined, undefined],
                             initialSize: [undefined, undefined],
                             transitPos: undefined,
@@ -168,8 +185,10 @@ angular.module('famousApp')
                     entries: [
                         {
                             id: '41',
-                            title: 'Eintrag 4.1',
-                            color: "'#dfdfdf'",
+                            title: 'Überschrift Eintrag 4.1',
+                            content: 'Content mit einem etwas längeren Text, der auch dann...',
+                            img: 'listitem-07.jpg',
+                            date: '14.09.14',
                             initialPos: [undefined, undefined],
                             initialSize: [undefined, undefined],
                             transitPos: undefined,
@@ -178,8 +197,10 @@ angular.module('famousApp')
                         },
                         {
                             id: '42',
-                            title: 'Eintrag 4.2',
-                            color: "'#dfdfdf'",
+                            title: 'Überschrift Eintrag 4.2',
+                            content: 'Content mit einem etwas längeren Text, der auch dann...',
+                            img: 'listitem-08.jpg',
+                            date: '14.09.14',
                             initialPos: [undefined, undefined],
                             initialSize: [undefined, undefined],
                             transitPos: undefined,
@@ -188,8 +209,10 @@ angular.module('famousApp')
                         },
                         {
                             id: '43',
-                            title: 'Eintrag 4.3',
-                            color: "'#dfdfdf'",
+                            title: 'Titel Eintrag 4.3',
+                            content: 'Content mit einem etwas längeren Text, der auch dann...',
+                            img: 'listitem-02.jpg',
+                            date: '14.09.14',
                             initialPos: [undefined, undefined],
                             initialSize: [undefined, undefined],
                             transitPos: undefined,
@@ -198,8 +221,10 @@ angular.module('famousApp')
                         },
                         {
                             id: '44',
-                            title: 'Eintrag 4.4',
-                            color: "'#dfdfdf'",
+                            title: 'Headline für Eintrag 4.4',
+                            content: 'Content mit einem etwas längeren Text, der auch dann...',
+                            img: 'listitem-01.jpg',
+                            date: '14.09.14',
                             initialPos: [undefined, undefined],
                             initialSize: [undefined, undefined],
                             transitPos: undefined,

@@ -5,7 +5,7 @@ angular.module('famousApp', ['famous.angular', 'ui.router'])
 
             .state("app", {
                 url: "/app",
-                controller: "appview",
+                controller: "appviewCtrl",
                 abstract: true,
                 templateUrl: "views/appview.html"
             })
@@ -14,17 +14,40 @@ angular.module('famousApp', ['famous.angular', 'ui.router'])
                 url: "/list",
                 abstract: true,
                 views: {
-                    "listView": { templateUrl: "views/listview.html" }
+                    "listView": {
+                        templateUrl: "views/listview.html",
+                        controller: "listviewCtrl"
+                    }
                 }
             })
 
             .state("app.list.detail", {
                 url: "/:detail",
                 views: {
-                    "detailView": { templateUrl: "views/listview-detail.html" }
+                    "detailView": {
+                        templateUrl: "views/listview-detail.html"
+                    }
                 }
             })
 
-        $urlRouterProvider.otherwise("/app/list/0");
+            .state("app.news", {
+                url: "/news",
+                views: {
+                    "listView": {
+                        templateUrl: "views/newsview.html"
+                    }
+                }
+            })
 
-    })
+            .state("app.home", {
+                url: "/home",
+                views: {
+                    "listView": {
+                        templateUrl: "views/homeview.html"
+                    }
+                }
+            });
+
+        $urlRouterProvider.otherwise("/app/home");
+
+    });

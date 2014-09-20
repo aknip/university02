@@ -37,20 +37,24 @@ body {
 }
 
 /* APP STYLES */
-.side-view-button {
+
+
+.side-view-button i{
     text-align: center;
     color: white;
-    font-family: "ios7-style-font-icons";
-    font-size: 14px;
-    line-height: 90px;
+    font-size: 16px;
+    position: absolute;
+    top: 35px;
+    left: 16px;
 }
 
-.fa.fa-arrows-alt {
-    color: #888;
+
+.navheader i {
+    color: #ccc;
     position: absolute;
-    top: 9px;
+    top: 11px;
     left: 10px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .navheader {
@@ -60,7 +64,7 @@ body {
 }
 
 .navheader span, .navsubheader span {
-    color: #aaa;
+    color: #ccc;
     position: absolute;
     top: 9px;
     left: 0px;
@@ -71,7 +75,7 @@ body {
 
 .navsubheader span {
     color: white;
-    font-size: 18px;
+    font-size: 1.1em;
     text-align: left;
     padding: 7px 25px 0 25px;
 }
@@ -82,20 +86,81 @@ body {
     box-shadow: 0 2px 5px 0 rgba(0,0,0, 0.5);
 }
 
+
+
+/*  category list  */
+
 .listCategoryItem {
-    text-align: left;
-    font-weight: 500;
-    padding: 7px 10px 0 10px;
-    color: #aaa;
     box-shadow: 0 2px 5px 0 rgba(0,0,0, 0.25);
 }
 
-
-.listEntryItem {
-    text-align: left;
-    padding: 7px 10px 0 10px;
-    color: #aaa;
+.listCategoryItem .categoryHeaderText {
+    color: #888;
+    font-weight: 100;
+    font-size: 1.1em;
+    position: absolute;
+    top: 5px;
+    left: 7px;
 }
+
+.listCategoryItem .categoryHeaderIcons {
+    position: absolute;
+    right: 12px;
+    top: 6px;
+}
+
+.listCategoryItem .categoryHeaderIcons i {
+    color: #888;
+    font-size: 0.9em;
+    margin-left: 6px;
+}
+
+/*  entry list  */
+.listEntryItem {
+
+}
+
+.listEntryItem .entryPictureRound {
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+
+}
+
+.listEntryItem .entryContentText {
+    text-align: left;
+    font-size: 0.7em;
+    color: #888;
+    position: absolute;
+    top: 2px;
+    left: 58px;
+    padding-right: 60px;
+}
+
+.listEntryItem .entryContentText strong {
+    font-weight: 500;
+    color: #000;
+}
+
+.listEntryItem .entryMetaInfo {
+    text-align: left;
+    font-size: 0.7em;
+    color: #888;
+    position: absolute;
+    top: 2px;
+    right: 13px;
+}
+
+.listEntryItem .entryMetaInfo i {
+    color: #ccc;
+    margin-left: 5px;
+}
+
 
 .detailcard {
     background-color: #2d5d81;
