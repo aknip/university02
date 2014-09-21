@@ -28,6 +28,4 @@ describe('Running Jasmine with Protractor', function () {
         expect(browser.getTitle()).to.eventually.equal("Famo.us/Angular");
     });
 
-
-
 });

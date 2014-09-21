@@ -2,7 +2,7 @@
 
 angular.module('famousApp')
 
-    .controller('listviewCtrl', function ($scope, $famous, $state, appOptions, appData, menuData) {
+    .controller('menu02Ctrl', function ($scope, $famous, $state, appOptions, appData, menuData) {
         var View = $famous['famous/core/View'];
         var Modifier = $famous['famous/core/Modifier'];
         var Surface = $famous['famous/core/Surface'];
@@ -12,8 +12,7 @@ angular.module('famousApp')
         var EventHandler = $famous['famous/core/EventHandler'];
         var Engine = $famous['famous/core/Engine'];
 
-
-
+        console.log("app3Ctrl");
     });
 
 

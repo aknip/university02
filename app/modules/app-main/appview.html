@@ -1,14 +1,13 @@
-
 <fa-app class="appsize" style="margin: 0;" fa-perspective="1000">
     <fa-surface fa-background-color="'#FFF'"></fa-surface>
     <fa-modifier fa-translate = "sideTransitionable1.get()">
 
         <fa-view id="side">
             <fa-modifier fa-size="[50, undefined]">
-                <fa-modifier fa-origin="[1, 0]" fa-translate = "sideTransitionable2.get()">
+                <fa-modifier fa-origin="[0, 0]" fa-translate = "sideTransitionable2.get()">
                     <fa-modifier fa-rotate = "sideTransitionable3.get()">
                         <fa-grid-layout fa-options="{ dimensions: [1, 6] }">
-                            <fa-surface ng-repeat="element in sideNavElements" ng-click="navigateMainMenu(element.targetState)" ng-class="['side-view-button']" fa-background-color="element.bgcolor">
+                            <fa-surface ng-repeat="element in sideNavElements" ng-click="navigateMainMenu(element.navID)" ng-class="['side-view-button']" fa-background-color="element.bgcolor">
                                 <i class="icon {{element.iconclass}}" ></i>
                             </fa-surface>
                         </fa-grid-layout>
@@ -19,14 +18,14 @@
 
         <fa-view id="main">
             <fa-header-footer-layout>
-                <fa-modifier fa-translate = "[0,0,3]">
+                <fa-modifier fa-translate = "[0,0,2]">
                     <fa-surface fa-size="[undefined, 35]" ng-class="['navheader']" fa-click="menuToggle($event)">
                         <i class="icon icon-scroll-omnidirectional-2"></i>acme management app
                     </fa-surface>
                 </fa-modifier>
-
-                <div ui-view="listView"></div>
-
+                <fa-view>
+                <div ui-view="contentView"></div>
+                </fa-view>
             </fa-header-footer-layout>
         </fa-view>
 

@@ -1,0 +1,60 @@
+<fa-view ng-controller="mainCtrl">
+    <fa-modifier  fa-translate="menu4.get()">
+        <fa-modifier  fa-translate="getNavSubheaderPos()">
+            <fa-surface ng-class="'navsubheader'" fa-size="[undefined, 150]">
+                Welcome !
+            </fa-surface>
+        </fa-modifier>
+        <fa-modifier  fa-translate="[0,0]">
+            <fa-surface fa-background-color="'#eee'" >
+            </fa-surface>
+        </fa-modifier>
+
+        <fa-modifier fa-translate="[0,0,2]">
+            <fa-container-surface fa-options="{size: [appOptions.appSize[0], undefined], properties: {overflow: 'hidden'}}">
+                <fa-scroll-view id="scrollview-1" fa-pipe-from="myscrollEventHandler" fa-options="{direction: 1}">
+                    <fa-view fa-size="[undefined, 1200]">
+                        <fa-view ng-repeat="catitem in list" ng-init="catIndex = $index">
+                            <fa-modifier fa-translate="catitem.transitPos.get()"
+                                         fa-size="catitem.transitSize.get()">
+                                <fa-surface fa-pipe-to="myscrollEventHandler"
+                                            fa-background-color="{{catitem.color}}"
+                                            ng-class="'listCategoryItem'"
+                                            ng-click="">
+
+                                        <div class="categoryHeaderText">{{catitem.title}}</div>
+                                        <div class="categoryHeaderIcons">
+                                            <i class="icon icon-download-2"></i>
+                                            <i class="icon icon-cube"></i>
+                                            <i class="icon icon-log-out-1"></i>
+                                        </div>
+
+                                </fa-surface>
+                            </fa-modifier>
+
+                        <fa-view ng-repeat="entryitem in catitem.entries" ng-init="entryIndex = $index">
+                            <fa-modifier fa-translate="entryitem.transitPos.get()"
+                                         fa-size="entryitem.transitSize.get()">
+                                <fa-surface fa-pipe-to="myscrollEventHandler"
+                                            ng-class="'listEntryItem'"
+                                            ng-click="testListAnimation(catIndex, entryIndex)">
+                                        <div class="entryPictureRound" style="background: url(modules/menu01-list/images/{{entryitem.img}}) no-repeat; background-size: cover;"></div>
+                                        <div class="entryContentText">
+                                            <strong>{{entryitem.title}}</br></strong>
+                                            {{entryitem.content}} </div>
+                                        <div class="entryMetaInfo">{{entryitem.date}} <i class="fa fa-ellipsis-v"></i></div>
+                                </fa-surface>
+                            </fa-modifier>
+                        </fa-view>
+
+
+                        </fa-view>
+                    </fa-view>
+
+                </fa-scroll-view>
+            </fa-container-surface>
+        </fa-modifier>
+
+        <div ui-view="detailView"></div>
+    </fa-modifier>
+</fa-view>

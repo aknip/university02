@@ -12,14 +12,14 @@ gulp.task('styles', function () {
 });
 
 gulp.task('scripts', function () {
-    return gulp.src('app/scripts/**/*.js')
+    return gulp.src('app/modules/**/*.js')
         .pipe($.jshint())
         .pipe($.jshint.reporter($.jshintStylish))
         .pipe($.size());
 });
 
 gulp.task('views', function () {
-  return gulp.src('app/views/**/*.html')
+  return gulp.src('app/modules/**/*.html')
       .pipe($.minifyHtml({
         empty: true,
         spare: true,
@@ -40,7 +40,7 @@ gulp.task('haml', function () {
 });
 
 gulp.task('jade', function () {
-  return gulp.src('app/views/**/*.jade')
+  return gulp.src('app/modules/**/*.jade')
       .pipe($.jade())
       .pipe(gulp.dest("app/views"))
 });
@@ -50,7 +50,7 @@ gulp.task('html', ['styles', 'scripts', 'haml', 'jade', 'views'], function () {
     var cssFilter = $.filter('**/*.css');
 
     ;
-    return gulp.src('app/*.html')
+    return gulp.src('app/modules/*.html')
         .pipe($.inject(gulp.src('.tmp/views/**/*.js'), {
           read: false,
           starttag: '<!-- inject:views -->',
@@ -74,7 +74,7 @@ gulp.task('html', ['styles', 'scripts', 'haml', 'jade', 'views'], function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src('app/images/**/*')
+    return gulp.src('app/modules/images/**/*')
         .pipe($.cache($.imagemin({
             optimizationLevel: 3,
             progressive: true,

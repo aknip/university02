@@ -3,7 +3,9 @@ module.exports = function (config) {
     config.set({
         basePath: '..', //!\\ Ignored through gulp-karma //!\\
 
-        // This REALLY important: phantomjs-polyfill must be added as FIRST src-file !!!
+        // This is REALLY important:
+        // phantomjs-polyfill must be added as FIRST src-file !!!
+        // router.js must be added as first application src-file because of its module-definition
         files: [ //!\\ Ignored through gulp-karma //!\\
             'test/helpers/phantomjs-polyfills.js',
             'app/bower_components/angular/angular.js',
@@ -12,7 +14,8 @@ module.exports = function (config) {
             'app/bower_components/famous/famous-global.js',
             'app/bower_components/famous-angular/dist/famous-angular.js',
             'app/bower_components/angular-ui-router/release/angular-ui-router.js',
-            'app/scripts/**/*.js',
+            'app/modules/app-main/router.js',
+            'app/modules/**/*.js',
             'test/unit/**/*.js'
         ],
 

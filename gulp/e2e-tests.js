@@ -24,7 +24,7 @@ gulp.task('protractor-jasmine-only', ['webdriver-update', 'wiredep'], function(d
     })
     .on('end', function() {
       // Close connect server to and gulp connect task
-      gulp.server.close();
+      //gulp.server.close();
       done();
     });
 });
@@ -49,7 +49,7 @@ gulp.task('protractor-cucumber-only', ['webdriver-update', 'wiredep'], function(
             throw err;
         })
         .on('end', function() {
-            gulp.server.close();
+            //gulp.server.close();
             done();
         });
 });

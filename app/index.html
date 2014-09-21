@@ -14,7 +14,7 @@
 
         <!-- build:css({.tmp,app}) styles/main.css -->
         <link rel="stylesheet" href="bower_components/open-sans-fontface/open-sans.css">
-        <link rel='stylesheet prefetch' href='icon-fonts/streamline-icons/streamline-30px/styles.css'>
+        <link rel='stylesheet prefetch' href='styles/icon-fonts/streamline-icons/streamline-30px/styles.css'>
 
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
@@ -26,6 +26,7 @@
         <app-presentationframe device="iPhone">
         </app-presentationframe>
 
+        <script src="polyfills/phantomjs-polyfills.js"></script>
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-animate/angular-animate.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -40,11 +41,15 @@
         <script src="bower_components/famous-angular/dist/famous-angular.js"></script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/appview.js"></script>
-        <script src="scripts/controllers/listview.js"></script>
-        <script src="scripts/components/app-presentationframe/presentationframe.js"></script>
-        <script src="scripts/components/services.js"></script>
+
+        <script src="modules/app-main/router.js"></script>
+        <script src="modules/app-main/appview.js"></script>
+        <script src="modules/app-main/appOptionsService.js"></script>
+        <script src="modules/menu01-list/mainCtrl.js"></script>
+        <script src="modules/menu01-list/dataService.js"></script>
+        <script src="modules/menu02-test/mainCtrl.js"></script>
+        <script src="modules/directives/app-presentationframe/presentationframe.js"></script>
+
         <!-- inject:views -->
         <!-- endinject -->
         <!-- endbuild -->

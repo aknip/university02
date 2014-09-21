@@ -17,11 +17,15 @@ gulp.task('unit-test', function () {
 
     // Add app and test files
     var testFiles = bowerDeps.js.concat([
-        'app/scripts/**/*.js',
+        'app/modules/app-main/router.js',
+        'app/modules/**/*.js',
         'test/unit/**/*.js'
     ]);
 
-    // This REALLY important: phantomjs-polyfill must be added as FIRST src-file !!!
+    // This is REALLY important:
+    // phantomjs-polyfill must be added as FIRST src-file !!!
+    // router.js must be added as first application src-file because of its module-definition
+
     testFiles.unshift('test/helpers/phantomjs-polyfills.js');
 
     return gulp.src(testFiles)

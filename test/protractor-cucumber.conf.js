@@ -10,12 +10,12 @@ exports.config = {
 
     // Capabilities to be passed to the webdriver instance.
     multiCapabilities: [
-        {
-          'browserName': 'chrome'
-        }
-
         //{
-        //    'browserName': 'phantomjs',
+        //  'browserName': 'chrome'
+        //}
+
+        {
+            'browserName': 'phantomjs',
 
             // Command line arugments to pass to phantomjs.
             // Can be ommitted if no arguments need to be passed.
@@ -27,9 +27,9 @@ exports.config = {
             // Can be used to specify the phantomjs binary path.
             // This can generally be ommitted if you installed phantomjs globally.
 
-        //    'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs'
-        //
-        //}
+            'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs'
+
+        }
     ],
 
     // Spec patterns are relative to the current working directly when

@@ -2,7 +2,7 @@
 
 angular.module('famousApp')
 
-    .controller('appviewCtrl', function ($scope, $famous, $state, appOptions, appData, menuData) {
+    .controller('mainCtrl', function ($scope, $famous, $state, appOptions, appData, menuData) {
         var View = $famous['famous/core/View'];
         var Modifier = $famous['famous/core/Modifier'];
         var Surface = $famous['famous/core/Surface'];
@@ -12,42 +12,10 @@ angular.module('famousApp')
         var EventHandler = $famous['famous/core/EventHandler'];
         var Engine = $famous['famous/core/Engine'];
 
-        $scope.appOptions = appOptions;
-
-        // side navigation
-        $scope.menuToggleStatus = true;
-
-        $scope.sideTransitionable1 = new Transitionable([0, 0, 0]);
-
-        $scope.sideTransitionable2 = new Transitionable([-50, 0, 1]);
-
-        $scope.sideTransitionable3 = new Transitionable([0, -Math.PI/2.5, 0]);
-
-        $scope.menuToggle = function($event){
-            if ($scope.menuToggleStatus)  {
-                $scope.sideTransitionable1.set([50, 0, 0], {duration: 500, curve: 'easeInOut'});
-                $scope.sideTransitionable3.set([0, 0, 0], {duration: 500, curve: 'easeInOut'});
-
-            } else {
-                $scope.sideTransitionable1.set([0, 0, 0], {duration: 500, curve: 'easeInOut'});
-                $scope.sideTransitionable3.set([0, -Math.PI/2.5, 0], {duration: 500, curve: 'easeInOut'});
-            }
-            $scope.menuToggleStatus = ! $scope.menuToggleStatus;
-
-        };
-
-        $scope.sideNavElements = menuData;
-
-        $scope.navigateMainMenu = function (targetState) {
-            $state.go(targetState);
-            //window.location = "http://localhost:9000/#/app/list/";
-
-        };
-
-
-        // Generate data for scroll-list
+// Generate data for scroll-list
 
         $scope.list = appData;
+
 
         // Calculate all initial positions and sizes of the list items
         // and update list model
@@ -290,32 +258,7 @@ angular.module('famousApp')
         };
 
 
-        // Positioning of detailview
-        $scope.animateDetail = new Transitionable([35,600,5]);
-
-
-        // Animation of detailview
-        $scope.$on('$stateChangeStart',
-            function(event, toState, toParams, fromState, fromParams) {
-
-                $scope.detailID = toParams.detail;
-
-                if (toParams.detail > 0) {
-                    $scope.animateDetail.set([35, 80, 5], {duration: 1000, curve: Easing.outElastic});
-                } else {
-                    $scope.animateDetail.set([35, 600, 5], {duration: 300, curve: Easing.inOutQuad});
-                }
-
-                console.log(toState);
-
-                // Prevent this state from completing
-                // evt.preventDefault();
-
-            });
-
-
     });
-
 
 
 

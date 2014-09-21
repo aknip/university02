@@ -12,3 +12,4 @@ Feature: Running Cucumber with Protractor
   Scenario: Opening the website
     Given I go on the website "#/app"
     Then the title should equal "Famo.us/Angular"
+    And I should see the surface of the navheader

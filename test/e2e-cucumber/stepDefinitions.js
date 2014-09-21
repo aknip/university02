@@ -11,6 +11,10 @@ var expect = chai.expect;
 
 module.exports = function() {
 
+    //browser.pause();
+    //browser.sleep(5000);
+    //browser.waitForAngular();
+
     this.Given(/^I run Cucumber with Protractor$/, function(next) {
         next();
     });
@@ -33,6 +37,24 @@ module.exports = function() {
 
     this.Then(/the title should equal "([^"]*)"$/, function(text, next) {
         expect(browser.getTitle()).to.eventually.equal(text).and.notify(next);
+    });
+
+    this.Then(/^I should see the surface of the navheader$/, function (next) {
+
+        var el = element(by.css('.famous-surface.navheader'));
+        el.getCssValue('-webkit-transform').then(function(cssVal) {
+            //console.log('transform: ' + cssVal);
+            //expect(cssVal).to.eventually.equal("xxx");
+        });
+
+        el.getOuterHtml().then(function(html) {
+            //console.log( html );
+        });
+
+        expect(element(by.css('.famous-surface.navheader')).getCssValue('-webkit-transform')).to.eventually.equal('matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 2, 1)');
+
+        next();
+
     });
 
 
