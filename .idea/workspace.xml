@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88ebd7f9-62b2-4515-a244-2ef9712ab77e" name="Default" comment="" />
+    <list default="true" id="88ebd7f9-62b2-4515-a244-2ef9712ab77e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="university02.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="watch.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulp/watch.js">
+      <file leaf-file-name="appview.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/modules/app-main/appview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="17" selection-start="457" selection-end="457" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="705">
+            <state line="22" column="93" selection-start="1304" selection-end="1304" vertical-scroll-proportion="-13.125" vertical-offset="15" max-vertical-offset="570">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appview.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/modules/app-main/appview.html">
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="93" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.73426574" vertical-offset="15" max-vertical-offset="570">
+            <state line="2" column="8" selection-start="31" selection-end="31" vertical-scroll-proportion="0.06437768" vertical-offset="0" max-vertical-offset="466">
               <folding />
             </state>
           </provider>
@@ -131,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test/e2e-jasmine/main.js" />
         <option value="$PROJECT_DIR$/test/e2e-cucumber/lib.feature" />
         <option value="$PROJECT_DIR$/test/e2e-cucumber/stepDefinitions.js" />
         <option value="$PROJECT_DIR$/test/protractor-cucumber.conf.js" />
@@ -147,6 +149,7 @@
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/modules/menu01-list/mainCtrl.js" />
         <option value="$PROJECT_DIR$/app/modules/app-main/appview.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -513,15 +516,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/e2e-jasmine/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="782" selection-end="782" vertical-scroll-proportion="0.6407186" vertical-offset="221" max-vertical-offset="555">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/e2e-cucumber/lib.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="6" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
@@ -624,7 +618,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/app-main/appview.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="93" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.73426574" vertical-offset="15" max-vertical-offset="570">
+        <state line="22" column="93" selection-start="1304" selection-end="1304" vertical-scroll-proportion="-13.125" vertical-offset="15" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="8" selection-start="31" selection-end="31" vertical-scroll-proportion="0.06437768" vertical-offset="0" max-vertical-offset="466">
           <folding />
         </state>
       </provider>
