@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88ebd7f9-62b2-4515-a244-2ef9712ab77e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/listitem-01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/listitem-02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/listitem-03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/listitem-04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/listitem-05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/listitem-06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/listitem-07.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/listitem-08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/images/listitem-cat.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/scripts/components/app-presentationframe/presentationframe.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/scripts/components/services.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/scripts/controllers/appview.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/scripts/controllers/listview.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/appview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/homeview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/listview-detail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/listview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/newsview.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp/build.js" afterPath="$PROJECT_DIR$/gulp/build.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp/e2e-tests.js" afterPath="$PROJECT_DIR$/gulp/e2e-tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/karma.conf.js" afterPath="$PROJECT_DIR$/test/karma.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/e2e-cucumber/lib.feature" afterPath="$PROJECT_DIR$/test/e2e-cucumber/lib.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/e2e-jasmine/main.js" afterPath="$PROJECT_DIR$/test/e2e-jasmine/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/protractor-cucumber.conf.js" afterPath="$PROJECT_DIR$/test/protractor-cucumber.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/e2e-cucumber/stepDefinitions.js" afterPath="$PROJECT_DIR$/test/e2e-cucumber/stepDefinitions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp/unit-tests.js" afterPath="$PROJECT_DIR$/gulp/unit-tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp/watch.js" afterPath="$PROJECT_DIR$/gulp/watch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="88ebd7f9-62b2-4515-a244-2ef9712ab77e" name="Default" comment="" />
     <ignored path="university02.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
